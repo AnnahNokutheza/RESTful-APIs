@@ -1,0 +1,34 @@
+Once you’ve sorted out the key aspects that can affect the success of your REST API integration project at the very early stages, 
+it’s highly recommended to develop a visualization of the data objects you will need to map. This will not only bring more structure into your project and 
+help others – your teammates, non-technical colleagues, consultants – understand what you’re doing or have done, but it will also give 
+you a clear understanding of how much data transformation needs to be performed.
+
+I have already written about Data Mapping Best Practices before, so if you would like to learn more about it, you’re more than welcome to
+check out that article. In short, this phase can be divided into two stages. The first one is logical data mapping, which is rather a high-level, 
+conceptual phase of the project, where you can bring in non-technical people such as your colleagues from accounting or sales. Next, it is followed 
+by physical data mapping, which gets down to a precise correlation of every data object in question.
+
+Physical data mapping example
+Physical data mapping example
+The image above is, no doubt, rather a fancy representation of how you can perform physical mapping. In practice, it can be as simple as using an 
+Excel or a Google Spreadsheet where you put your source application on one side and the destination application on the other, listing not only the
+object or field names but also other key pieces of information such as:
+
+object or field IDs,
+the respective data type of each object,
+maximum field length,
+is the respective object / field required or not, and so on
+One important thing to do when working on data mapping is eliminate or at least limit any confusion in terminology. For example, the word ‘approval’
+may mean, or rather, cover entirely different processes depending on the application vendor. Over time, it might even make sense to create some kind of a 
+glossary for most common terms.
+The image above is, no doubt, rather a fancy representation of how you can perform physical mapping. In practice, 
+it can be as simple as using an Excel or a Google Spreadsheet where you put your source application on one side and the 
+destination application on the other, listing not only the object or field names but also other key pieces of information such as:
+
+object or field IDs,
+the respective data type of each object,
+maximum field length,
+is the respective object / field required or not, and so on
+One important thing to do when working on data mapping is eliminate or at least limit any confusion in terminology. 
+For example, the word ‘approval’ may mean, or rather, cover entirely different processes depending on the application vendor.
+Over time, it might even make sense to create some kind of a glossary for most common terms.
