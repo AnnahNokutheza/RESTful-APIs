@@ -1,0 +1,4 @@
+REST APIs have several methods of authentication, but with APIs for business software applications and 
+web services such as CRM or Accounting, you will most likely find two: API Key and OAuth (2.0). Authentication 
+with API Key is pretty straightforward; some applications provide a default API Key and API Token, others, 
+like VTEX digital commerce platform, allow you to set up separate API keys for each REST integration:
