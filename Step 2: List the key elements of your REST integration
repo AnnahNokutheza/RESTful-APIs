@@ -1,0 +1,9 @@
+Before you even start drafting a strategy for connecting various data objects, you should sort out some other important aspects of the process of REST API integrations. It’s a good idea to set up a checklist so that you know what information you need to gather upfront. This checklist should answer questions such as:
+
+Are there any restrictions on the payload
+What are the provided authentication methods
+What is the allowed number of requests per unit time
+Is there SSL certificate validation
+What are the traffic encryption requirements
+Are there any specific headers that a request should contain
+Does the vendor provide a test server or any other way to perform a test request, and how you get access to that
