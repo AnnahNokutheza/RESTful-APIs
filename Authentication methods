@@ -2,3 +2,16 @@ REST APIs have several methods of authentication, but with APIs for business sof
 web services such as CRM or Accounting, you will most likely find two: API Key and OAuth (2.0). Authentication 
 with API Key is pretty straightforward; some applications provide a default API Key and API Token, others, 
 like VTEX digital commerce platform, allow you to set up separate API keys for each REST integration:
+
+OAuth (2.0) can be a bit more complex as it has different sets of mechanisms for granting secure access. 
+Authorization code is mostly used for server-side and mobile web applications; the so-called 
+Implicit authorization flow (when the client retrieves an access token directly) is usually found in web, 
+desktop and mobile applications and services that don’t include any server component; logging in with a 
+Username and Password is another common mechanism; and the Client Credentials method is intended for server-to-server 
+authentication, where users can specify their credentials in the client application.
+
+In practice, many applications allow you to create the so-called OAuth Clients that will allow the users and 
+developers to easily authenticate themselves with a respective application.
+In addition to clarifying how to grant access to the respective applications, you should also think about how long you’ll need 
+the authentication instance to run for.
+In other words, will the data exchange need to be open all of the time or only on occasion?
