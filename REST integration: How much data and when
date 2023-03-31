@@ -1,0 +1,46 @@
+When planning your REST API integration, consider how much in volume, how often and at what intervals data must be transferred. In order to save own resources, 
+most REST APIs pose a limit on how often an API can be called or how much data can be transferred per day. 
+Similarly, some business processes are “satisfied” when data is delivered in batches once a day; for others 
+such as lead routing, timely data update is critical. This means that the amount of data to be transferred must be 
+balanced against the rate of data transfer allowed and the time expectation for accessibility and availability of data.
+
+This requires combining the project requirements with the capabilities and the provided resources of the respective
+REST APIs. You may start with requesting an exact list of business processes that should be automated through your project. 
+If necessary, talk to other departments, e.g. with sales people, directly. This way, you’ll get a good overview of how much data, 
+when and how often should ideally flow between the applications and web services in question. Then check the respective REST API
+documentation or get in touch with their technical support to find out how much data, when and how often you will be allowed to transfer,
+and then work from there to find a well-balanced compromise.
+
+Data Inconsistencies
+When integrating data, you will encounter all kinds of data inconsistencies and discrepancies. The irregular naming of data objects
+(‘customer’ vs ‘client’) or data objects that are custom (‘payments’ vs ‘firstpaymentofthemonth’) are the most obvious ones, but it can 
+be even more banal: one application captures date and time in the format such as “Tue Feb 15 2022 14:16:19 GMT+0000”, whereas the other
+app accepts only the ISO 8601 format.
+
+Without checking and amending date and time formats first, your REST integration will produce errors in the best case scenario or completely 
+false data in the worst case scenario where for example “November 5th” will become “May 11th”.
+
+So, be sure to set up a checklist of all possible aspects and elements that might be different and result in critical errors: date & time format,
+field size limitations, clothing size standards, currency values, and so on.
+
+HTTP Request Methods
+REST APIs use specific HTTP protocol request types to perform the Create, Read, Update and Delete (CRUD) operations. 
+The most commonly used methods are Post, Get, Put and Delete methods, although there are a few more. 
+These methods define the intent of your data flow: When you send data to another application, this application will need to
+know what’s your intention behind it. Do you want to create a new record, update an existing one, or delete a record?
+
+You can also introduce the so-called UPSERT function. This one combines the methods of ‘Post’ and ‘Put’ (or ‘Create’ and ‘Update’), 
+checking whether a certain record, usually specified by ID, is available and updating it if it is, or creating a new one if it isn’t.
+Many modern enterprise integration platforms feature this method as well. The advantage of ‘Upsert’ is that it helps avoid or at least 
+limit duplicating data and/or losing critical data records.
+
+Also, a good API documentation should give you a clear overview of what method goes with what API endpoint. For example, VTEX clearly 
+states that to remove all items from a shopping cart, you should use the POST method together with the
+URI https://{mystore}.{myvtex}.com.br/api/checkout/pub/orderForm/{orderFormId}/items/removeAll, whereas to update a shopping cart, 
+you’ll use PATCH with https://{mystore}.{myvtex}.com.br/api/checkout/pub/orderForm/{orderFormId}/items.
+
+If the HTTP request methods are not clearly defined in the respective REST API documentation, you will need to get in touch with their 
+technical team and sort out this question upfront.
+
+Create a REST Integration Specifics overview
+Ideally, after you did your research and clarified the points listed above, you should end up with a good overview of what each respective API can do and how. It might be a good idea to put all that information in one table for future reference. Here is an example of such overview:
