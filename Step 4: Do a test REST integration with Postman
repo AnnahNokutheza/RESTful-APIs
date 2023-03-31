@@ -1,0 +1,13 @@
+Once you’ve gathered all the supporting information you could find and set up a mapping plan, you may take an extra step and run a test with a 
+specific business process, e.g. executing an order fulfillment, on Postman, – with the specifications of a corresponding REST API, 
+checking the most common use cases with various datasets. In other words, you would simulate what the application will do later automatically.
+
+You’d be surprised but such a test run can reveal up to 70 percent of documentation inaccuracies at the very early stages of the REST 
+integration development. For example, the documentation said that a certain endpoint will accept JSON whereas in reality, it expects form-data.
+Or the rules for field validation are specified incorrectly.
+
+You can then collect the errors you received and if you find no obvious reason for them, send them to the developers of the respective REST API 
+for further clarification and correction.
+
+Of course, using Postman is just one option out of several. Maybe you can get access to a test server with API or there is a mechanism that allows 
+to send test requests to the production server.
